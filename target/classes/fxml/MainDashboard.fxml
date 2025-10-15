@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.metis.controllers.MainDashboardController"
+            stylesheets="@../css/application.css">
+
+    <!-- ===== Sidebar ===== -->
+    <left>
+        <VBox fx:id="sidebar" prefWidth="200" spacing="20" styleClass="sidebar" BorderPane.alignment="CENTER_LEFT">
+            <Label text="METIS" styleClass="app-title"/>
+            <Button text="Dashboard" onAction="#openDashboard"/>
+            <Button text="Calendar" onAction="#openCalendar"/>
+            <Button text="To-Do List" onAction="#openTodo"/>
+            <Button text="Notes" onAction="#openNotes"/>
+            <Button text="GPA Tracker" onAction="#openGpa"/>
+            <Button text="Timetable" onAction="#openTimetable"/>
+            <Button text="Settings" onAction="#openSettings"/>
+            <Button text="Backup" onAction="#openBackup"/>
+        </VBox>
+    </left>
+
+    <!-- ===== Main Content Area ===== -->
+    <center>
+        <StackPane fx:id="contentArea">
+            <Label text="Welcome to Metis!" styleClass="welcome-label"/>
+        </StackPane>
+    </center>
+
+</BorderPane>
