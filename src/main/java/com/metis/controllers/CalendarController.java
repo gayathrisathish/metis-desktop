@@ -32,6 +32,7 @@ public class CalendarController {
 
         // Make event title text black
         titleField.setStyle("-fx-text-fill: black;");
+        descField.setStyle("-fx-text-fill: white;");
     }
 
     // ========================== Calendar Drawing ==========================
@@ -56,8 +57,15 @@ public class CalendarController {
             cell.setSpacing(5);
 
             // Date label
+            // Date label (now black)
             Label dayLabel = new Label(String.valueOf(day));
-            dayLabel.setStyle("-fx-font-weight: bold;");
+            dayLabel.setStyle(
+                "-fx-font-weight: bold;" +
+                "-fx-text-fill: black;" +        // 🟩 makes text black
+                "-fx-font-size: 14px;" +
+                "-fx-alignment: center;" +
+                "-fx-padding: 4;");
+
 
             // Show event if exists
             if (events.containsKey(date)) {

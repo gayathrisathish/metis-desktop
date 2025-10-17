@@ -267,3 +267,60 @@
     -fx-text-fill: white;
     -fx-font-size: 22px;
 }
+
+/* NOTES PART OF THE CODE*/
+.notes-sidebar {
+    -fx-background-color: #1e293b;
+    -fx-padding: 10;
+    -fx-border-color: #2d3748;
+}
+
+.section-title {
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+}
+
+.primary-button {
+    -fx-background-color: #3b82f6;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+}
+
+.danger-button {
+    -fx-background-color: #ef4444;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+}
+
+.text-field, .text-area {
+    -fx-control-inner-background: #0f172a;
+    -fx-text-fill: white;
+    -fx-highlight-fill: #3b82f6;
+}
+/* Notes title: black text (overrides global text-field styles) */
+.notes-title {
+    -fx-text-fill: black;
+    -fx-prompt-text-fill: rgba(0,0,0,0.45);
+}
+
+/*SETTINGS PART OF THE CODE*/
+.section-title {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+}
+
+.app-info {
+    -fx-font-size: 12px;
+    -fx-text-fill: gray;
+}
+
+.danger-button {
+    -fx-background-color: #b71c1c;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+

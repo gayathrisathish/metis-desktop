@@ -1,9 +1,73 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.control.*?>
-<VBox xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="com.metis.controllers.GpaController" spacing="8">
-    <children>
-        <Label text="GPA Tracker" />
-        <TableView />
-    </children>
-</VBox>
+<?import javafx.geometry.Insets?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.metis.controllers.GpaController"
+            stylesheets="@../css/application.css"
+            prefWidth="900" prefHeight="600">
+
+    <!-- ===== Top Bar ===== -->
+    <top>
+        <HBox spacing="15" alignment="CENTER_LEFT" styleClass="gpa-topbar">
+            <padding>
+                <Insets top="15" right="15" bottom="15" left="15"/>
+            </padding>
+            <Label text="🎓 GPA Tracker" styleClass="gpa-title"/>
+        </HBox>
+    </top>
+
+    <!-- ===== Main Content ===== -->
+    <center>
+        <VBox spacing="20" alignment="TOP_CENTER" styleClass="gpa-content">
+            <padding>
+                <Insets top="20" right="20" bottom="20" left="20"/>
+            </padding>
+
+            <!-- Input Form -->
+            <GridPane hgap="15" vgap="15" alignment="CENTER">
+                <padding>
+                    <Insets top="10" right="10" bottom="10" left="10"/>
+                </padding>
+
+                <Label text="Subject:" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+                <TextField fx:id="subjectField" GridPane.rowIndex="0" GridPane.columnIndex="1" promptText="Enter subject"/>
+
+                <Label text="Credits:" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+                <TextField fx:id="creditsField" GridPane.rowIndex="1" GridPane.columnIndex="1" promptText="Enter credits"/>
+
+                <Label text="Grade:" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+                <ComboBox fx:id="gradeBox" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+
+                <Button text="➕ Add Course" 
+                        onAction="#addCourse" 
+                        GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+            </GridPane>
+
+            <!-- Table -->
+            <TableView fx:id="gpaTable" prefHeight="300" prefWidth="700">
+                <columns>
+                    <TableColumn fx:id="subjectCol" text="Subject" prefWidth="200"/>
+                    <TableColumn fx:id="creditsCol" text="Credits" prefWidth="150"/>
+                    <TableColumn fx:id="gradeCol" text="Grade" prefWidth="150"/>
+                    <TableColumn fx:id="pointsCol" text="Grade Points" prefWidth="150"/>
+                </columns>
+            </TableView>
+
+            <!-- Result + Delete -->
+            <HBox spacing="20" alignment="CENTER">
+                <padding>
+                    <Insets top="15" right="15" bottom="15" left="15"/>
+                </padding>
+                <Label text="GPA:" style="-fx-font-size: 16px; -fx-font-weight: bold;"/>
+                <Label fx:id="gpaResultLabel" text="0.00" style="-fx-font-size: 16px; -fx-text-fill: #2a9d8f; -fx-font-weight: bold;"/>
+
+                <Button text="🗑 Delete Selected" onAction="#deleteSelected"/>
+            </HBox>
+
+        </VBox>
+    </center>
+</BorderPane>
+    
