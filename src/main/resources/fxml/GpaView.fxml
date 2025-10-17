@@ -15,7 +15,8 @@
             <padding>
                 <Insets top="15" right="15" bottom="15" left="15"/>
             </padding>
-            <Label text="🎓 GPA Tracker" styleClass="gpa-title"/>
+            <Label text="🎓 GPA Tracker" 
+                   style="-fx-font-size: 20px; -fx-font-weight: bold; -fx-text-fill: white;"/>
         </HBox>
     </top>
 
@@ -32,14 +33,27 @@
                     <Insets top="10" right="10" bottom="10" left="10"/>
                 </padding>
 
-                <Label text="Subject:" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
-                <TextField fx:id="subjectField" GridPane.rowIndex="0" GridPane.columnIndex="1" promptText="Enter subject"/>
+                <Label text="Subject:" 
+                       GridPane.rowIndex="0" GridPane.columnIndex="0" 
+                       style="-fx-text-fill: white;"/>
+                <TextField fx:id="subjectField" 
+                           GridPane.rowIndex="0" GridPane.columnIndex="1" 
+                           promptText="Enter subject"
+                           style="-fx-text-fill: black; -fx-prompt-text-fill: gray;"/>
 
-                <Label text="Credits:" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
-                <TextField fx:id="creditsField" GridPane.rowIndex="1" GridPane.columnIndex="1" promptText="Enter credits"/>
+                <Label text="Credits:" 
+                       GridPane.rowIndex="1" GridPane.columnIndex="0" 
+                       style="-fx-text-fill: white;"/>
+                <TextField fx:id="creditsField" 
+                           GridPane.rowIndex="1" GridPane.columnIndex="1" 
+                           promptText="Enter credits"
+                           style="-fx-text-fill: black; -fx-prompt-text-fill: gray;"/>
 
-                <Label text="Grade:" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
-                <ComboBox fx:id="gradeBox" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+                <Label text="Grade:" 
+                       GridPane.rowIndex="2" GridPane.columnIndex="0" 
+                       style="-fx-text-fill: white;"/>
+                <ComboBox fx:id="gradeBox" 
+                          GridPane.rowIndex="2" GridPane.columnIndex="1"/>
 
                 <Button text="➕ Add Course" 
                         onAction="#addCourse" 
@@ -61,8 +75,11 @@
                 <padding>
                     <Insets top="15" right="15" bottom="15" left="15"/>
                 </padding>
-                <Label text="GPA:" style="-fx-font-size: 16px; -fx-font-weight: bold;"/>
-                <Label fx:id="gpaResultLabel" text="0.00" style="-fx-font-size: 16px; -fx-text-fill: #2a9d8f; -fx-font-weight: bold;"/>
+                <Label text="GPA:" 
+                       style="-fx-font-size: 16px; -fx-font-weight: bold; -fx-text-fill: white;"/>
+                <Label fx:id="gpaResultLabel" 
+                       text="0.00" 
+                       style="-fx-font-size: 16px; -fx-text-fill: #2a9d8f; -fx-font-weight: bold;"/>
 
                 <Button text="🗑 Delete Selected" onAction="#deleteSelected"/>
             </HBox>
@@ -70,4 +87,3 @@
         </VBox>
     </center>
 </BorderPane>
-    
